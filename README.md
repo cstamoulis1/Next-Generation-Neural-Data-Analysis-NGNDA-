@@ -1,5 +1,5 @@
 # Next-Generation-Neural-Data-Analysis(NGNDA)-EEG
-This part of the repository contains codes for high-dimensional analysis of human electrophysiology data
+This part of the repository contains codes for high-dimensional analysis of human electrophysiology data.
 The main codes are:
 1. sc2_analysis_allbands: this code performs signal decomposition and connectivity analysis 
 for a particular file and segment of continuous EEG data
