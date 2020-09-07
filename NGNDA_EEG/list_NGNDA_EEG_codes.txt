@@ -1,0 +1,14 @@
+1. sc2_analysis_allbands: this code performs a signal decomposition and connectivity analysis for a particular file and segment of continuous EEG data
+
+It decomposes broadband electrophysiological signals using a modified Empirical Mode Decomposition (unsupervised approach)
+Signals are segments of continuous (typically multi-hour) recordings at multiple electodes (often >1000 in invasive studies).
+The code uses both cross-correlation and mutual information as measures of connectivity, estimated for each narrowband mode,
+and saves these multiband connectivity matrices, as well as mode parameters as part of a single structure.
+
+Given that the highest dimension in this analysis is in time, true parallelization is done in that dimension.
+So, sc2_analysis_allbands takes as arguments the file of interest and segment of interest and is called through a parfor loop by
+sc2_masterjob.
+
+
+2. master_submit_sc2.m sets the cluster, queue and sc2_master parameters for processing and submits one batch job (sc2_masterjob).
+
