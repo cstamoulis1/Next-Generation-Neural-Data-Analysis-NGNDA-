@@ -1,7 +1,7 @@
 1. sc2_analysis_allbands: this code performs a signal decomposition and connectivity analysis for a particular file and segment of continuous EEG data
 
 It decomposes broadband electrophysiological signals using a modified Empirical Mode Decomposition (unsupervised approach)
-Signals are segments of continuous (typically multi-hour) recordings at multiple electodes (often >1000 in invasive studies).
+Signals are segments of continuous (typically multi-hour) recordings at multiple electodes (often >100 in invasive studies).
 The code uses both cross-correlation and mutual information as measures of connectivity, estimated for each narrowband mode,
 and saves these multiband connectivity matrices, as well as mode parameters as part of a single structure.
 
